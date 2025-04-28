@@ -1,0 +1,245 @@
+/* Login Form Custom Styles */
+
+/* Background gradient animation */
+.bg-gradient-to-r {
+    background-size: 200% 200%;
+    animation: gradientAnimation 10s ease infinite;
+}
+  
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+  
+/* Form container styles */
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
+}
+  
+.login-box {
+    width: 100%;
+    max-width: 400px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    animation: slideUp 0.5s ease;
+}
+  
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+  
+.login-header {
+    text-align: center;
+    padding: 30px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+  
+.login-header h2 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 600;
+}
+  
+.login-header p {
+    margin: 10px 0 0;
+    opacity: 0.9;
+}
+  
+.login-form {
+    padding: 30px;
+}
+  
+.form-group {
+    margin-bottom: 20px;
+}
+  
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #4a5568;
+    font-weight: 500;
+}
+  
+.form-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+  
+.form-input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    outline: none;
+}
+  
+.error-message {
+    background-color: #fff5f5;
+    border: 1px solid #fc8181;
+    color: #c53030;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+  
+.login-button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+  
+.login-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+  
+.login-button:disabled {
+    background: #a0aec0;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+  
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+}
+  
+.remember-me {
+    display: flex;
+    align-items: center;
+}
+  
+.remember-me input {
+    margin-right: 8px;
+}
+  
+.forgot-password {
+    color: #667eea;
+    text-decoration: none;
+    font-size: 14px;
+}
+  
+.forgot-password:hover {
+    text-decoration: underline;
+}
+  
+/* Input field styles */
+input[type="email"],
+input[type="password"] {
+    transition: all 0.3s ease;
+}
+  
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+    transform: translateY(-1px);
+}
+  
+/* Button styles */
+button[type="submit"] {
+    transition: all 0.3s ease;
+}
+  
+button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+  
+button[type="submit"]:active {
+    transform: translateY(0);
+}
+  
+/* Checkbox custom styling */
+input[type="checkbox"] {
+    position: relative;
+    cursor: pointer;
+}
+  
+input[type="checkbox"]:checked {
+    background-color: #3b82f6;
+    border-color: #3b82f6;
+}
+
+/* Forced Colors Mode support */
+@media (forced-colors: active) {
+    .login-button {
+        border: 2px solid ButtonText;
+        background: ButtonFace;
+        color: ButtonText;
+    }
+    
+    .login-button:hover {
+        background: Highlight;
+        color: HighlightText;
+    }
+    
+    .login-button:disabled {
+        background: GrayText;
+        color: ButtonFace;
+    }
+    
+    input[type="email"]:focus,
+    input[type="password"]:focus {
+        outline: 2px solid Highlight;
+    }
+}
+  
+/* Link hover effect */
+a {
+    position: relative;
+    transition: color 0.3s ease;
+}
+  
+a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+  
+a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+  
+@media (max-width: 640px) {
+    .max-w-md {
+        width: 100%;
+    }
+}
