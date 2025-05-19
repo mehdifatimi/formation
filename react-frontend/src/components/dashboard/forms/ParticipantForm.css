@@ -1,0 +1,183 @@
+.participant-form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 24px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-header {
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.participant-form .ant-form-item {
+    margin-bottom: 16px;
+}
+
+.participant-form .ant-form-item-label {
+    font-weight: 500;
+}
+
+.participant-form .ant-input,
+.participant-form .ant-select-selector,
+.participant-form .ant-picker {
+    border-radius: 4px;
+    border: 1px solid #d9d9d9;
+    transition: all 0.3s;
+}
+
+.participant-form .ant-input:hover,
+.participant-form .ant-select-selector:hover,
+.participant-form .ant-picker:hover {
+    border-color: #40a9ff;
+}
+
+.participant-form .ant-input:focus,
+.participant-form .ant-select-selector:focus,
+.participant-form .ant-picker-focused {
+    border-color: #40a9ff;
+    box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+.participant-form .ant-btn {
+    height: 40px;
+    padding: 0 24px;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.participant-form .ant-btn-primary {
+    background: #1890ff;
+    border-color: #1890ff;
+}
+
+.participant-form .ant-btn-primary:hover {
+    background: #40a9ff;
+    border-color: #40a9ff;
+}
+
+.participant-form .ant-btn-default {
+    border-color: #d9d9d9;
+}
+
+.participant-form .ant-btn-default:hover {
+    color: #40a9ff;
+    border-color: #40a9ff;
+}
+
+.participant-form .ant-form-item-explain-error {
+    color: #ff4d4f;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.participant-form .ant-select-dropdown {
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.participant-form .ant-select-item-option-selected {
+    background-color: #e6f7ff;
+}
+
+.participant-form .ant-picker-panel {
+    border-radius: 4px;
+}
+
+.participant-form .ant-picker-cell-in-view.ant-picker-cell-selected .ant-picker-cell-inner {
+    background: #1890ff;
+}
+
+.participant-form .ant-picker-cell:hover:not(.ant-picker-cell-in-view) .ant-picker-cell-inner,
+.participant-form .ant-picker-cell:hover:not(.ant-picker-cell-selected):not(.ant-picker-cell-range-start):not(.ant-picker-cell-range-end):not(.ant-picker-cell-range-hover-start):not(.ant-picker-cell-range-hover-end) .ant-picker-cell-inner {
+    background: #e6f7ff;
+}
+
+/* Styles pour les placeholders */
+.participant-form .ant-input::placeholder,
+.participant-form .ant-select-selection-placeholder {
+    color: #bfbfbf;
+}
+
+/* Styles pour les tooltips */
+.participant-form .ant-tooltip-inner {
+    background-color: #1890ff;
+    border-radius: 4px;
+}
+
+.participant-form .ant-tooltip-arrow::before {
+    background-color: #1890ff;
+}
+
+/* Styles pour le compteur de caractères */
+.participant-form .ant-input-textarea-show-count::after {
+    color: #bfbfbf;
+    font-size: 12px;
+}
+
+/* Styles pour le spinner de chargement */
+.participant-form .ant-spin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+}
+
+.participant-form .ant-spin-dot {
+    font-size: 24px;
+}
+
+/* Styles pour les messages d'erreur */
+.participant-form .ant-form-item-explain-error {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Styles pour la modal de confirmation */
+.participant-form .ant-modal-confirm-body .ant-modal-confirm-title {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.participant-form .ant-modal-confirm-body .ant-modal-confirm-content {
+    margin-top: 8px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .participant-form {
+        padding: 16px;
+    }
+
+    .participant-form .ant-form-item {
+        margin-bottom: 12px;
+    }
+
+    .participant-form .ant-btn {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .form-header {
+        margin-bottom: 16px;
+        padding-bottom: 12px;
+    }
+
+    .participant-form .ant-spin {
+        min-height: 150px;
+    }
+} 
